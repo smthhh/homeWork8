@@ -61,9 +61,12 @@ console.log(splitArr([1, 2, 3, 4], [2, 3]));
 function reverseAndValue(num){
     let num1 = num.toString().split('').reverse().join('');
     // console.log(num1);
-    let num2 = num;
     
-    let result = parseInt(num1 + num2); 
+    let result = num1 + num; 
+
+    if (result.length > 15){
+        return String(result);
+    }
 
     return result;
 }
